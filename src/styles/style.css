@@ -9,7 +9,13 @@
 
 body {
   background-color: rgb(104, 97, 88);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .d-block {
@@ -99,6 +105,7 @@ form {
 .switch-field {
   display: flex;
   overflow: hidden;
+  margin-left: 10px;
   margin-top: 20px;
 }
 
@@ -148,7 +155,7 @@ form {
 
 #container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto;
   opacity: 0.95;
 }
 
@@ -220,6 +227,12 @@ form {
 
 .value-div {
   font-weight: 500;
+}
+
+@media screen and (min-width: 541px) {
+  .switch-field {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 640px) {
