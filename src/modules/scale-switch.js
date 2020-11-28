@@ -16,7 +16,7 @@ const scaleSwitcher = () => {
   };
   const celciusBtnLabel = document.createElement('label');
   celciusBtnLabel.setAttribute('for', 'radio-one');
-  celciusBtnLabel.textContent = 'Celcius';
+  celciusBtnLabel.textContent = 'Celsius';
 
   const farenheitBtn = document.createElement('input');
   farenheitBtn.setAttribute('type', 'radio');
