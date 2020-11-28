@@ -31,7 +31,7 @@ visibility, etc. are displayed.
 
 ## Live Demo
 
-- [Weather Now](https://rawcdn.githack.com/ershadul1/weather-now/6edea1253685d76a311e44a5cd68afb817ee44ed/dist/index.html)
+- [Weather Now](https://rawcdn.githack.com/ershadul1/weather-now/6c8c81d30cd655a3be950b403f617b02b512ea1b/dist/index.html)
 
 ## How to run this project on your local machine
 
