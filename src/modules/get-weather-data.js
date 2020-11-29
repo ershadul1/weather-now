@@ -5,8 +5,8 @@ import invalidCity from './invalid-input';
 const getWeatherData = async (cityName) => {
   try {
     const apiKey = process.env.API_KEY;
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`);
-    const weatherData = await response.json();
+    const apiResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`);
+    const weatherData = await apiResponse.json();
 
     if (weatherData.cod === '404') {
       invalidCity();
@@ -16,7 +16,7 @@ const getWeatherData = async (cityName) => {
       getBackground(weatherData.weather[0].main);
     }
   } catch {
-    // error
+    throw new Error('Failed to fetch from: Open Weather API');
   }
 };
 
