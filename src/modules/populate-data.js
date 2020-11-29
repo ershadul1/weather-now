@@ -23,9 +23,7 @@ const populateData = () => {
     };
   }
 
-
   const data = JSON.parse(localStorage.getItem('weatherData'));
-
 
   const locationContainer = document.createElement('div');
   locationContainer.classList.add('location-container');
@@ -80,8 +78,6 @@ const populateData = () => {
   weatherDescription.textContent = `${data.weather[0].main}, ${data.weather[0].description}`;
   weatherDescription.classList.add('weather-description');
 
-  // console.log(data);
-
   innerContainer.append(timeContainer, iconContainer, weatherDescription);
 
   const variousParamContainer = document.createElement('div');
@@ -102,9 +98,6 @@ const populateData = () => {
     Sunset: `${format(sunsetTime, 'p')}`,
   };
 
-  // console.log(params.Visibility);
-
-
   Object.keys(params).forEach((key) => {
     const paramDiv = document.createElement('div');
     paramDiv.classList.add('param-div', 'd-flex', 'justify-between');
@@ -120,11 +113,8 @@ const populateData = () => {
     variousParamContainer.appendChild(paramDiv);
   });
 
-
   weatherDataContainer.append(locationContainer, innerContainer, variousParamContainer);
   container.appendChild(weatherDataContainer);
-
-  // console.log(conversion(data.main.temp));
 };
 
 export default populateData;

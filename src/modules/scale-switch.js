@@ -30,7 +30,6 @@ const scaleSwitcher = () => {
   farenheitBtnLabel.setAttribute('for', 'radio-two');
   farenheitBtnLabel.textContent = 'Farenheit';
 
-
   switchDiv.append(celciusBtn, celciusBtnLabel, farenheitBtn, farenheitBtnLabel);
   navContainer.appendChild(switchDiv);
 };
