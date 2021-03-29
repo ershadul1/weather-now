@@ -21,9 +21,7 @@ const convert = (scale) => {
     return convertToCelsius;
   }
 
-  if (scale === 'F') {
-    return convertToFareheit;
-  }
-}
+  return convertToFareheit;
+};
 
 export { removeChildrenOfElement, convert };

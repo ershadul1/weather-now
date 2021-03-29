@@ -10,8 +10,8 @@ const populateData = () => {
 
   removeChildrenOfElement('weather-data-container');
 
-  let conversion = convert(scale);
-  
+  const conversion = convert(scale);
+
   const data = JSON.parse(localStorage.getItem('weatherData'));
 
   const locationContainer = document.createElement('div');
