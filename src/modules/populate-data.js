@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import removeChildrenOfElement from './helper';
+import { removeChildrenOfElement, convert } from './helper';
 import dateConversion from './date-conversion';
 
 const populateData = () => {
@@ -10,19 +10,8 @@ const populateData = () => {
 
   removeChildrenOfElement('weather-data-container');
 
-  let conversion;
-  if (scale === 'C') {
-    conversion = (val) => {
-      const res = `${(val - 273.15).toFixed(0)}°`;
-      return res;
-    };
-  } else {
-    conversion = (val) => {
-      const res = `${((val - 273.15) * (9 / 5) + 32).toFixed(0)}°`;
-      return res;
-    };
-  }
-
+  let conversion = convert(scale);
+  
   const data = JSON.parse(localStorage.getItem('weatherData'));
 
   const locationContainer = document.createElement('div');
