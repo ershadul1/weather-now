@@ -1,4 +1,4 @@
-import removeChildrenOfElement from './helper';
+import { removeChildrenOfElement } from './helper';
 
 const invalidCity = () => {
   const container = document.querySelector('#weather-data-container');
